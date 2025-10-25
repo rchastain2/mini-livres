@@ -1,0 +1,75 @@
+\documentclass[fontsize=28pt,a4paper]{scrartcl}
+
+\usepackage[margin=0.75in,includefoot,bottom=0.3in,footskip=2em]{geometry}
+
+\usepackage{fontspec}
+\setmainfont{EBGaramond}
+[
+  Extension      = .otf ,
+  UprightFont    = *-Regular,
+  ItalicFont     = *-Italic,
+  BoldFont       = *-Bold,
+  BoldItalicFont = *-BoldItalic,
+  Numbers        = Lowercase,
+  Ligatures      = Discretionary,
+  Style          = Swash
+]
+% https://texnique.fr/osqa/questions/8423/lualatex-et-ligatures
+
+\usepackage[french]{babel}
+
+% https://tex.stackexchange.com/a/123669/295527
+%\renewcommand*{\FrenchLabelItem}{$\bullet$}
+%\frenchsetup{StandardItemLabels=true}
+\frenchsetup{StandardLayout=true}
+
+\usepackage{microtype}
+
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{intersections,calc}
+\usepackage{caption}
+\usepackage{longtable,booktabs,array}
+\usepackage{comment}
+
+\usepackage[showmarks]{pocketmod}% https://github.com/liantze/pocketmod.sty
+
+% https://fr.overleaf.com/latex/examples/mini-livre-trigonometrie/ntgbdvthxhnb
+% https://fr.overleaf.com/latex/examples/mini-livre-exercices-de-rentree-en-seconde/gncxgskzswtc
+% https://forge.apps.education.fr/duplessyerwan/site-mini-math-livre
+
+\usepackage{graphicx}
+\usepackage{enumitem}
+\setlist{leftmargin=\parindent,labelindent=*}
+\usepackage{hyperref}
+\usepackage[hyphenbreaks]{breakurl}
+
+%\title{Creating PocketMods with \LaTeX}
+\title{Socrate et la rhétorique}
+
+%\author{LianTze Lim}
+%\author{\small Vincent Pantaloni}
+\author{\small R. Chastain}
+\date{\includegraphics[width=.75\textwidth]{folding-minibook}}
+
+\begin{document}
+
+\thispagestyle{empty}
+\maketitle
+
+\clearpage
+\input{page2.tex}
+\clearpage
+\input{page3.tex}
+\clearpage
+\input{page4.tex}
+\clearpage
+\input{page5.tex}
+\clearpage
+\input{page6.tex}
+\clearpage
+\input{page7.tex}
+\clearpage
+\input{page8.tex}
+
+\end{document}
