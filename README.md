@@ -6,5 +6,5 @@ L'image de couverture provient du très beau [mini-livre de trigonométrie](http
 
 ## Table
 
-- [gorgias](Socrate et la rhétorique)
-- [socrate](Socrate et la justice)
+- [Socrate et la justice](socrate)
+- [Socrate et la rhétorique](gorgias)
