@@ -4,7 +4,7 @@ TARGETS := $(SOURCES:%.tex=%)
 all: $(TARGETS)
 
 %: %.tex
-	lualatex --jobname=$@ $<
+	lualatex --jobname=$@-$(notdir $(CURDIR)) $<
 
 clean:
 	rm -rf *.aux

@@ -1,14 +1,11 @@
-
-SOURCES := $(wildcard *.tex)
+SOURCES := ${wildcard *.tex}
 TARGETS := $(SOURCES:%.tex=%)
 
 all: $(TARGETS)
 
 %: %.tex
-	@lualatex --jobname=$@ $<
+	lualatex --jobname=$@-$(notdir $(CURDIR)) $<
 
 clean:
-	@rm -fv *.aux *.log *.out
-
-distclean: clean
-	@rm -fv *.pdf
+	rm -rf *.aux
+	rm -rf *.log
